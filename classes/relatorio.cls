@@ -13,7 +13,7 @@
 \RequirePackage{times}
 
 % Margens ABNT: 3cm superior, 2cm direita, 2cm inferior, 3cm esquerda
-\RequirePackage[top=3cm, right=2cm, bottom=2cm, left=3cm, headheight=30pt]{geometry}
+\RequirePackage[top=3cm, right=2cm, bottom=2cm, left=3cm, headheight=45pt]{geometry}
 
 % Espaçamento 1.5
 \RequirePackage{setspace}
@@ -94,22 +94,34 @@
 \newcommand{\professor}[1]{\def\@professor{#1}}
 \newcommand{\aluno}[1]{\def\@aluno{#1}}
 \newcommand{\titulo}[1]{\def\@titulo{#1}}
+\newcommand{\logo}[1]{\def\@logo{#1}}
 
 % Configuração do estilo de página
 \pagestyle{fancy}
 \fancyhf{} % Limpa cabeçalho e rodapé
 
-% Cabeçalho
+% Cabeçalho com logo
 \fancyhead[L]{%
-    \small
-    \textbf{\@instituicao} \\
-    \@curso \\
-    \@disciplina
+    \begin{minipage}[c]{0.15\textwidth}
+        \ifdefined\@logo
+            \includegraphics[height=1.2cm]{\@logo}
+        \fi
+    \end{minipage}%
+    \hspace{0.5cm}%
+    \begin{minipage}[c]{0.45\textwidth}
+        \small
+        \textbf{\@instituicao} \\
+        \@curso \\
+        \@disciplina
+    \end{minipage}%
 }
 \fancyhead[R]{%
-    \small
-    \@professor \\
-    \@aluno
+    \begin{minipage}[c]{0.3\textwidth}
+        \raggedleft
+        \small
+        \@professor \\
+        \@aluno
+    \end{minipage}%
 }
 
 % Rodapé

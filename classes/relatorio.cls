@@ -126,7 +126,8 @@
 }
 
 % Rodapé
-\fancyfoot[L]{\small \@nome}
+\fancyfoot[L]{\small https://github.com/OgliariNatan}
+%\fancyfoot[L]{\small \@nome}
 \fancyfoot[C]{\small \today}
 \fancyfoot[R]{\small Pág. \thepage\ de \pageref{LastPage}}
 

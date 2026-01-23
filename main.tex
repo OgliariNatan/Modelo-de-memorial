@@ -1,0 +1,121 @@
+\documentclass{classes/relatorio}
+
+% ==================================================
+% CONFIGURAÇÕES DO CABEÇALHO E RODAPÉ
+% ==================================================
+\instituicao{Nome da Instituição}
+\curso{Nome do Curso}
+\disciplina{Nome da Disciplina}
+\professor{Prof.(a) Nome do Professor}
+\aluno{Nome do Aluno}
+\titulo{Título do Relatório}
+
+% ==================================================
+% INÍCIO DO DOCUMENTO
+% ==================================================
+\begin{document}
+
+% ==================================================
+% INTRODUÇÃO
+% ==================================================
+\section{Introdução}
+
+A introdução deve apresentar o tema do relatório de forma clara e objetiva, contextualizando o leitor sobre o assunto que será abordado. É importante que sejam estabelecidos os objetivos do trabalho e a justificativa para sua realização.
+
+Este documento foi estruturado seguindo as normas da ABNT (Associação Brasileira de Normas Técnicas) para trabalhos acadêmicos, garantindo padronização e qualidade na apresentação dos resultados.
+
+\subsection{Objetivos}
+
+\subsubsection{Objetivo Geral}
+
+Apresentar um modelo de relatório técnico formatado segundo as normas ABNT, facilitando a elaboração de documentos acadêmicos.
+
+\subsubsection{Objetivos Específicos}
+
+\begin{itemize}
+    \item Demonstrar a estrutura básica de um relatório;
+    \item Apresentar exemplos de citações e referências;
+    \item Ilustrar o uso de figuras, tabelas e códigos.
+\end{itemize}
+
+% ==================================================
+% DESENVOLVIMENTO
+% ==================================================
+\section{Desenvolvimento}
+
+O desenvolvimento é a parte principal do relatório, onde são apresentados os dados, análises, resultados e discussões pertinentes ao tema abordado.
+
+\subsection{Fundamentação Teórica}
+
+Segundo \citeonline{knuth1984texbook}, a composição tipográfica de documentos técnicos requer atenção especial aos detalhes de formatação e estruturação do texto.
+
+\citeauthor{lamport1994latex} (\citeyear{lamport1994latex}) destaca a importância de sistemas de preparação de documentos que permitam ao autor focar no conteúdo, enquanto o sistema cuida da formatação.
+
+\subsection{Metodologia}
+
+A metodologia descreve os procedimentos utilizados para a realização do trabalho. Pode incluir descrição de experimentos, coleta de dados, ferramentas utilizadas, entre outros aspectos relevantes.
+
+\subsection{Resultados}
+
+\subsubsection{Figuras}
+
+As figuras devem ser inseridas no texto com legendas descritivas, conforme exemplo da Figura \ref{fig:exemplo}.
+
+\begin{figure}[htbp]
+    \centering
+    % \includegraphics[width=0.6\textwidth]{img/exemplo.png}
+    \fbox{\parbox{0.6\textwidth}{\centering [Insira sua imagem aqui]\\img/exemplo.png}}
+    \caption{Exemplo de legenda de figura}
+    \label{fig:exemplo}
+\end{figure}
+
+\subsubsection{Tabelas}
+
+As tabelas seguem o padrão ABNT, com bordas superiores e inferiores, conforme Tabela \ref{tab:exemplo}.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Exemplo de tabela formatada segundo ABNT}
+    \label{tab:exemplo}
+    \begin{tabular}{lcc}
+        \hline
+        \textbf{Item} & \textbf{Valor 1} & \textbf{Valor 2} \\
+        \hline
+        Linha 1 & 10,5 & 20,3 \\
+        Linha 2 & 15,7 & 18,9 \\
+        Linha 3 & 12,3 & 22,1 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\subsubsection{Códigos}
+
+Códigos-fonte podem ser inseridos diretamente ou importados de arquivos externos, como demonstrado no Código \ref{cod:python}.
+
+\lstinputlisting[language=Python, caption=Exemplo de código Python, label=cod:python]{cod/exemplo.py}
+
+Alternativamente, códigos curtos podem ser inseridos inline:
+
+\begin{lstlisting}[language=Python, caption=Código inline]
+def funcao_exemplo(x, y):
+    return x + y
+
+resultado = funcao_exemplo(5, 3)
+print(f"Resultado: {resultado}")
+\end{lstlisting}
+
+% ==================================================
+% CONCLUSÃO
+% ==================================================
+\section{Conclusão}
+
+A conclusão deve retomar os objetivos apresentados na introdução e sintetizar os principais resultados obtidos no desenvolvimento do trabalho. É importante que seja concisa e objetiva, destacando as contribuições do estudo e possíveis trabalhos futuros.
+
+Este modelo de relatório demonstrou a aplicação das normas ABNT para documentos técnicos, fornecendo exemplos práticos de estruturação, citações, figuras, tabelas e códigos-fonte.
+
+% ==================================================
+% REFERÊNCIAS
+% ==================================================
+\bibliography{referencias}
+
+\end{document}

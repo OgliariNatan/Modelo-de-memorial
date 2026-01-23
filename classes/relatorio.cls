@@ -122,7 +122,7 @@
 }
 
 % Rodapé
-\fancyfoot[L]{\small \@titulo}
+\fancyfoot[L]{\small \@nome}
 \fancyfoot[C]{\small \today}
 \fancyfoot[R]{\small Página \thepage\ de \pageref{LastPage}}
 

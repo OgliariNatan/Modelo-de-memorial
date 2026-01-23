@@ -1,6 +1,6 @@
-# Modelo de Relatório LaTeX - ABNT (Sem Capa)
+# Modelo de memorando personalizado
 
-Modelo simplificado de relatório técnico com **cabeçalho e rodapé automáticos** em todas as páginas, formatado segundo normas ABNT.
+Modelo simplificado de memorando técnico com **cabeçalho e rodapé automáticos** em todas as páginas, formatado segundo normas ABNT.
 
 ## 📁 Estrutura
 
@@ -18,28 +18,27 @@ relatorio-latex/
 
 ## 🎯 Características
 
-✅ **Sem capa** - Inicia direto no conteúdo  
 ✅ **Texto em arquivo único** - Todo conteúdo em `main.tex`  
 ✅ **Cabeçalho automático** - Repetido em todas as páginas  
-✅ **Rodapé automático** - Com título, data e numeração  
+✅ **Rodapé automático** - Com nome, data e numeração  
 ✅ **Formatação ABNT completa**  
 ✅ **Referências automáticas**
 
 ## 📋 Cabeçalho (em todas as páginas)
 
 ```
-┌─────────────────────────────────────────────────┐
-│ Nome da Instituição          Prof.(a) Nome      │
-│ Nome do Curso                Nome do Aluno      │
-│ Nome da Disciplina                              │
-├─────────────────────────────────────────────────┤
+┌───────┌──────────────────────────────────────────┐
+│       | ENGENHEIRO DE SOFTWARE                   │
+│  LOGO | TÉCNICO EM ELETROELETRÔNICA              │
+│       | NATAN OGLIARI                            │
+├───────├──────────────────────────────────────────┤
 ```
 
 ## 📋 Rodapé (em todas as páginas)
 
 ```
 ├─────────────────────────────────────────────────┤
-│ Título do Relatório    23/01/2024   Pág. 1 de 5│
+│ AUTOR    23 de janeiro de 2026       Pág. 1 de 5│
 └─────────────────────────────────────────────────┘
 ```
 
@@ -48,11 +47,9 @@ relatorio-latex/
 ### 1. Edite as informações no `main.tex`
 
 ```latex
-\instituicao{Nome da Instituição}
-\curso{Nome do Curso}
-\disciplina{Nome da Disciplina}
-\professor{Prof.(a) Nome do Professor}
-\aluno{Nome do Aluno}
+\superior{ENGENHEIRO DE SOFTWARE }
+\curso{TÉCNICO EM ELETROELETRÔNICA }
+\nome{Nome}
 \titulo{Título do Relatório}
 ```
 
@@ -129,7 +126,7 @@ Conforme literatura (\cite{lamport1994latex}).
 - ✅ Espaçamento: 1,5 linhas
 - ✅ Recuo de parágrafo: 1,25cm
 - ✅ Cabeçalho e rodapé com linhas de separação
-- ✅ Numeração: "Página X de Y"
+- ✅ Numeração: "Pág. X de Y"
 - ✅ Referências: NBR 6023:2018
 
 ## 🔧 Requisitos
@@ -141,8 +138,8 @@ Conforme literatura (\cite{lamport1994latex}).
 
 ## 📄 Licença
 
-Uso livre para fins acadêmicos e educacionais.
+Uso livre.
 
 ---
 
-**Última atualização:** Janeiro/2024
+**Última atualização:** Janeiro/2026

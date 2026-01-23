@@ -128,7 +128,7 @@
 % Rodapé
 \fancyfoot[L]{\small \@nome}
 \fancyfoot[C]{\small \today}
-\fancyfoot[R]{\small Página \thepage\ de \pageref{LastPage}}
+\fancyfoot[R]{\small Pág. \thepage\ de \pageref{LastPage}}
 
 % Linhas de separação
 \renewcommand{\headrulewidth}{0.4pt}

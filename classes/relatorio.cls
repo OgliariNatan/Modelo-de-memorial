@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{relatorio}[2026/01 Classe para Relatórios ABNT com Cabeçalho e Rodapé]
+\ProvidesClass{relatorio}[2026/01 Classe para memorando personalizado]
 
 % Baseado na classe article
 \LoadClass[12pt, a4paper]{article}
@@ -11,6 +11,7 @@
 \RequirePackage[T1]{fontenc}
 \RequirePackage[brazil]{babel}
 \RequirePackage{times}
+\RequirePackage{enumitem} % Para customizar itemize, enumerate, description
 
 % Margens ABNT: 3cm superior, 2cm direita, 2cm inferior, 3cm esquerda
 \RequirePackage[top=3cm, right=2cm, bottom=2cm, left=3cm, headheight=45pt]{geometry}
@@ -76,6 +77,9 @@
 
 \lstset{style=estilo-codigo}
 
+% Tradução para português
+\renewcommand{\lstlistingname}{Código}
+\renewcommand{\lstlistlistingname}{Lista de Códigos}
 % ==================================================
 % HYPERLINKS
 % ==================================================
@@ -139,4 +143,4 @@
     \end{center}%
 }
 % Aplicar estilo fancy em todas as páginas
-\AtBeginDocument{\thispagestyle{fancy}}
+%\AtBeginDocument{\thispagestyle{fancy}}

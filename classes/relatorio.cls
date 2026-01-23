@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{relatorio}[2024/01 Classe para Relatórios ABNT com Cabeçalho e Rodapé]
+\ProvidesClass{relatorio}[2026/01 Classe para Relatórios ABNT com Cabeçalho e Rodapé]
 
 % Baseado na classe article
 \LoadClass[12pt, a4paper]{article}
@@ -30,7 +30,7 @@
 \RequirePackage{titlesec}
 \titleformat{\section}{\normalfont\fontsize{12}{15}\bfseries\uppercase}{\thesection}{1em}{}
 \titleformat{\subsection}{\normalfont\fontsize{12}{15}\bfseries}{\thesubsection}{1em}{}
-\titleformat{\subsubsection}{\normalfont\fontsize{12}{15}\bfseries\itshape}{\thesubsubsection}{1em}{}
+\titleformat{\subsubsection}{\normalfont\fontsize{12}{15}\bfseries\itshape}{\thesubsubsection}{2em}{}
 
 % ==================================================
 % CITAÇÕES E REFERÊNCIAS ABNT
@@ -88,11 +88,9 @@
 \RequirePackage{lastpage}
 
 % Comandos personalizados para informações
-\newcommand{\instituicao}[1]{\def\@instituicao{#1}}
+\newcommand{\superior}[1]{\def\@superior{#1}}
 \newcommand{\curso}[1]{\def\@curso{#1}}
-\newcommand{\disciplina}[1]{\def\@disciplina{#1}}
-\newcommand{\professor}[1]{\def\@professor{#1}}
-\newcommand{\aluno}[1]{\def\@aluno{#1}}
+\newcommand{\nome}[1]{\def\@nome{#1}}
 \newcommand{\titulo}[1]{\def\@titulo{#1}}
 \newcommand{\logo}[1]{\def\@logo{#1}}
 
@@ -104,23 +102,22 @@
 \fancyhead[L]{%
     \begin{minipage}[c]{0.15\textwidth}
         \ifdefined\@logo
-            \includegraphics[height=1.2cm]{\@logo}
+            \includegraphics[height=2.5cm]{\@logo}
         \fi
     \end{minipage}%
     \hspace{0.5cm}%
     \begin{minipage}[c]{0.45\textwidth}
         \small
-        \textbf{\@instituicao} \\
-        \@curso \\
-        \@disciplina
+        \textbf{\@superior} \\
+        \textbf{\@curso} \\
+        \textbf{\@nome}
     \end{minipage}%
 }
 \fancyhead[R]{%
     \begin{minipage}[c]{0.3\textwidth}
         \raggedleft
         \small
-        \@professor \\
-        \@aluno
+        %adiciona a lateral direita informacoes do cabecalho
     \end{minipage}%
 }
 
@@ -133,5 +130,13 @@
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.4pt}
 
+
+\AtBeginDocument{%
+    \thispagestyle{fancy}%
+    \vspace*{1cm}%
+    \begin{center}%
+        \textbf{\@titulo}%
+    \end{center}%
+}
 % Aplicar estilo fancy em todas as páginas
 \AtBeginDocument{\thispagestyle{fancy}}

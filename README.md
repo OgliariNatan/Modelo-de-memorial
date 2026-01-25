@@ -23,6 +23,8 @@ relatorio-latex/
 ✅ **Rodapé automático** - Com nome, data e numeração  
 ✅ **Formatação ABNT completa**  
 ✅ **Referências automáticas**
+✅ **Opção de Minuta** - Para remover, comente a linha `\minutatrue` no `relatorio.cls`
+
 
 ## 📋 Cabeçalho (em todas as páginas)
 

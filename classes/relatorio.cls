@@ -97,8 +97,7 @@
 % ==================================================
 % MARCA D'ÁGUA (MINUTA)
 % ==================================================
-\newif\ifminuta
-\minutatrue        % <-- comente esta linha para remover a marca (ou troque por \minutafalse)
+\providecommand{\ifminuta}{\iffalse} % se main.tex não definir, fica desligado
 
 \ifminuta
   \RequirePackage{draftwatermark}

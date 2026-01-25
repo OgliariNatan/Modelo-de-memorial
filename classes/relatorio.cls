@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{relatorio}[2026/01 Classe para memorando personalizado]
+%\ProvidesClass{relatorio}[2026/01 Classe para Memorial personalizado]
 
 % Baseado na classe article
 \LoadClass[12pt, a4paper]{article}
@@ -26,6 +26,12 @@
 \setlength{\parskip}{0pt}
 
 % ==================================================
+% HYPERLINKS
+% ==================================================
+\RequirePackage[hidelinks]{hyperref}
+
+
+% ==================================================
 % SEÇÕES
 % ==================================================
 \RequirePackage{titlesec}
@@ -37,6 +43,12 @@
 % CITAÇÕES E REFERÊNCIAS ABNT
 % ==================================================
 \RequirePackage[alf, abnt-emphasize=bf, bibjustif]{abntex2cite}
+%\providecommand{\abntnextkey}{}
+
+\RequirePackage{quoting}
+
+%\usepackage[alf, abnt-emphasize=bf]{abntex2cite}
+%\usepackage{quoting}
 
 % ==================================================
 % FIGURAS E TABELAS
@@ -80,10 +92,24 @@
 % Tradução para português
 \renewcommand{\lstlistingname}{Código}
 \renewcommand{\lstlistlistingname}{Lista de Códigos}
+
+
 % ==================================================
-% HYPERLINKS
+% MARCA D'ÁGUA (MINUTA)
 % ==================================================
-\RequirePackage[hidelinks]{hyperref}
+\newif\ifminuta
+\minutatrue        % <-- comente esta linha para remover a marca (ou troque por \minutafalse)
+
+\ifminuta
+  \RequirePackage{draftwatermark}
+  \SetWatermarkText{MINUTA}
+  \SetWatermarkScale{1}
+  \SetWatermarkAngle{45}
+  \SetWatermarkLightness{0.90} % 0 = escuro, 1 = bem claro
+\fi
+
+
+
 
 % ==================================================
 % CABEÇALHO E RODAPÉ
@@ -126,19 +152,20 @@
 }
 
 % Rodapé
-\fancyfoot[L]{\small https://github.com/OgliariNatan}
+\fancyfoot[L]{\small \href{https://github.com/OgliariNatan}{https://github.com/OgliariNatan}}
 %\fancyfoot[L]{\small \@nome}
 \fancyfoot[C]{\small \today}
 \fancyfoot[R]{\small Pág. \thepage\ de \pageref{LastPage}}
 
 % Linhas de separação
-\renewcommand{\headrulewidth}{0.4pt}
-\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\footrulewidth}{0.2pt}
 
 
 \AtBeginDocument{%
     \thispagestyle{fancy}%
-    \vspace*{1cm}%
+    %\rightline{\small{\today}}%
+    \vspace*{1pt}%
     \begin{center}%
         \textbf{\@titulo}%
     \end{center}%

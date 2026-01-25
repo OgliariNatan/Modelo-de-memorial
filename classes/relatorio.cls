@@ -14,7 +14,9 @@
 \RequirePackage{enumitem} % Para customizar itemize, enumerate, description
 
 % Margens ABNT: 3cm superior, 2cm direita, 2cm inferior, 3cm esquerda
-\RequirePackage[top=3cm, right=2cm, bottom=2cm, left=3cm, headheight=45pt]{geometry}
+\RequirePackage[top=3cm, right=2cm, bottom=2cm, left=3cm, headheight=50pt]{geometry}
+%\addtolength{\topmargin}{-21.13188pt}
+
 
 % Espaçamento 1.5
 \RequirePackage{setspace}
@@ -87,7 +89,24 @@
     tabsize=2
 }
 
-\lstset{style=estilo-codigo}
+\lstset{
+    style=estilo-codigo,
+    inputencoding=utf8,
+    extendedchars=true,
+    literate=
+        {á}{{\'a}}1 {à}{{\`a}}1 {ã}{{\~a}}1 {â}{{\^a}}1
+        {é}{{\'e}}1 {ê}{{\^e}}1
+        {í}{{\'i}}1
+        {ó}{{\'o}}1 {ô}{{\^o}}1 {õ}{{\~o}}1
+        {ú}{{\'u}}1
+        {ç}{{\c{c}}}1
+        {Á}{{\'A}}1 {À}{{\`A}}1 {Ã}{{\~A}}1 {Â}{{\^A}}1
+        {É}{{\'E}}1 {Ê}{{\^E}}1
+        {Í}{{\'I}}1
+        {Ó}{{\'O}}1 {Ô}{{\^O}}1 {Õ}{{\~O}}1
+        {Ú}{{\'U}}1
+        {Ç}{{\c{C}}}1
+}
 
 % Tradução para português
 \renewcommand{\lstlistingname}{Código}

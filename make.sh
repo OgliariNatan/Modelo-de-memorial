@@ -10,4 +10,12 @@ rm -f main.aux main.bbl main.blg main.log main.out main.toc main.pdf main.fdb_la
 
 
 # Roda com erros
-pdflatex main.tex ; bibtex main; pdflatex main.tex ; pdflatex main.tex
+pdflatex main.tex ; \
+echo "================================================================================" ; \
+echo "Rodando BibTeX..." ; \
+echo "================================================================================" ; \
+bibtex main; \
+\pdflatex main.tex ; \
+echo "================================================================================" ; \
+echo "Rodando pdflatex para gerar o PDF final..." ; \
+pdflatex main.tex

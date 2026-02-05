@@ -56,6 +56,7 @@
 % FIGURAS E TABELAS
 % ==================================================
 \RequirePackage{graphicx}
+\RequirePackage{float}
 \RequirePackage{caption}
 \captionsetup{font=small, labelfont=bf, justification=centering}
 

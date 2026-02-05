@@ -151,7 +151,7 @@
 \fancyhead[L]{%
     \begin{minipage}[c]{0.15\textwidth}
         \ifdefined\@logo
-            \includegraphics[height=2.5cm]{\@logo}
+            \includegraphics[height=2.6cm]{\@logo}
         \fi
     \end{minipage}%
     \hspace{0.5cm}%

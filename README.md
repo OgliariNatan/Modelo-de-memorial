@@ -1,4 +1,4 @@
-# Modelo de memorando personalizado
+# Modelo de memorial personalizado
 
 Modelo simplificado de memorando técnico com **cabeçalho e rodapé automáticos** em todas as páginas, formatado segundo normas ABNT.
 

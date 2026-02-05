@@ -144,4 +144,4 @@ Uso livre.
 
 ---
 
-**Última atualização:** Janeiro/2026
+**Última atualização:** Fevereiro/2026

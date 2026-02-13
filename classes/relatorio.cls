@@ -154,14 +154,24 @@
             \includegraphics[height=2.6cm]{\@logo}
         \fi
     \end{minipage}%
-    \hspace{0.5cm}%
-    \begin{minipage}[c]{0.45\textwidth}
+    %\hspace{0.5cm}%
+    % \begin{minipage}[c]{0.45\textwidth}
+    %     \small
+    %     \textbf{\@superior} \\
+    %     \textbf{\@curso} \\
+    %     \textbf{\@nome}
+    % \end{minipage}%
+}
+\fancyhead[C]{
+    \begin{minipage}[c]{0.5\textwidth}
         \small
+        \centering
         \textbf{\@superior} \\
         \textbf{\@curso} \\
         \textbf{\@nome}
     \end{minipage}%
 }
+
 \fancyhead[R]{%
     \begin{minipage}[c]{0.3\textwidth}
         \raggedleft
@@ -177,8 +187,14 @@
 \fancyfoot[R]{\small Pág. \thepage\ de \pageref{LastPage}}
 
 % Linhas de separação
-\renewcommand{\headrulewidth}{0.2pt}
-\renewcommand{\footrulewidth}{0.2pt}
+\renewcommand{\headrulewidth}{0.1pt}
+\renewcommand{\footrulewidth}{0.1pt}
+% Adiciona figurta como linha de rodapé
+% \renewcommand{\footrule}{%
+%     \vspace{-0.3\baselineskip}%
+%     \noindent\includegraphics[width=\textwidth, height=4pt]{img/logo.png}%
+% }
+
 
 
 \AtBeginDocument{%

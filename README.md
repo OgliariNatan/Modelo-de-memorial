@@ -1,6 +1,6 @@
 # Modelo de memorial personalizado
 
-Modelo simplificado de memorando técnico com **cabeçalho e rodapé automáticos** em todas as páginas, formatado segundo normas ABNT.
+Modelo simplificado de memorial técnico com **cabeçalho e rodapé automáticos** em todas as páginas.
 
 ## 📁 Estrutura
 
@@ -30,9 +30,9 @@ relatorio-latex/
 
 ```
 ┌───────┌──────────────────────────────────────────┐
-│       | ENGENHEIRO DE SOFTWARE                   │
-│  LOGO | TÉCNICO EM ELETROELETRÔNICA              │
-│       | NATAN OGLIARI                            │
+│       |       ENGENHEIRO DE SOFTWARE             │
+│  LOGO |     TÉCNICO EM ELETROELETRÔNICA          │
+│       |              NATAN OGLIARI               │
 ├───────├──────────────────────────────────────────┤
 ```
 
@@ -75,8 +75,10 @@ pdflatex main.tex
 ```latex
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.6\textwidth]{img/figura.png}
     \caption{Descrição da figura}
+    \includegraphics[width=0.6\textwidth]{img/figura.png}
+    {\fontsize{10pt}{\baselineskip}\selectfont
+   Fonte: O autor (2026)}
     \label{fig:minha-figura}
 \end{figure}
 ```
@@ -84,7 +86,7 @@ pdflatex main.tex
 ### Adicionar Tabelas
 
 ```latex
-\begin{table}[htbp]
+\begin{table}[H]
     \centering
     \caption{Título da tabela}
     \label{tab:minha-tabela}
@@ -95,6 +97,8 @@ pdflatex main.tex
         Dado 1 & Dado 2 & Dado 3 \\
         \hline
     \end{tabular}
+    {\fontsize{10pt}{\baselineskip}\selectfont
+   Fonte: O autor (2026)}
 \end{table}
 ```
 
@@ -137,6 +141,9 @@ Conforme literatura (\cite{lamport1994latex}).
 - Pacote `abntex2cite`
 - Pacote `fancyhdr`
 - Pacote `lastpage`
+- Pacote `enumitem`
+- Pacote `float`
+
 
 ## 📄 Licença
 
